@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+    <ModulePrefs title="Get DAI Gadget">
+        <Require feature="opensocial-0.9"/>
+        <Require feature="dynamic-height"/>
+        <Require feature="views"/>
+        <Require feature="opensocial-data"/>
+        <Require feature="opensocial-templates"/>
+        <Require feature="osapi"/>
+    </ModulePrefs>
+    <Content type="html" href="http://codejam.dev.local/content/devcon/getdai/content.php"/>
+</Module>
