@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Development Container</title>
+        <script type="text/javascript" src="/gadgets/js/shindig-container:rpc.js?c=1&amp;debug=1&amp;nocache=1"></script>
+        <script type="text/javascript">
+            var specUrl = 'http://codejam.dev.local/content/devcon/helloworld.xml';
+            var specUrls = new Array(
+            'http://codejam.dev.local/content/devcon/helloworld.xml',
+            'http://codejam.dev.local/content/devcon/getdai.xml'
+        )
+            
+            function renderGadget() {
+                
+                shindig.container.layoutManager = new shindig.FloatLeftLayoutManager('layoutRoot')
+                
+                for(x in specUrls) {
+                    var gadget = shindig.container.createGadget({specUrl: specUrls[x]});
+                    shindig.container.addGadget(gadget);
+                    shindig.container.renderGadget(gadget);
+                }
+                
+            };
+        </script>
+    </head>
+    <body onload="renderGadget();">
+        <div id="layoutRoot"></div>
+    </body>
+</html>
